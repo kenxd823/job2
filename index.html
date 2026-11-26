@@ -3,179 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job2 - แบบฟอร์มข้อมูลส่วนตัว</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            color: #1e293b;
-        }
-
-        .card {
-            background-color: #ffffff;
-            width: 100%;
-            max-width: 420px;
-            padding: 32px 28px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-            border: 1px solid #e2e8f0;
-        }
-
-        h1 {
-            font-size: 1.5rem;
-            text-align: center;
-            margin-bottom: 8px;
-            color: #0f172a;
-        }
-
-        .subtitle {
-            font-size: 0.9rem;
-            text-align: center;
-            color: #64748b;
-            margin-bottom: 24px;
-        }
-
-        .form-group {
-            margin-bottom: 18px;
-        }
-
-        label {
-            display: block;
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin-bottom: 6px;
-            color: #334155;
-        }
-
-        input {
-            width: 100%;
-            padding: 10px 14px;
-            font-size: 1rem;
-            border: 1.5px solid #cbd5e1;
-            border-radius: 8px;
-            outline: none;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        input:focus {
-            border-color: #4f46e5;
-            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
-        }
-
-        button[type="submit"] {
-            width: 100%;
-            margin-top: 8px;
-            padding: 12px;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #ffffff;
-            background-color: #4f46e5;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.2s ease, transform 0.1s ease;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #4338ca;
-        }
-
-        button[type="submit"]:active {
-            transform: scale(0.99);
-        }
-    </style>
+    <title>กรอกข้อมูลส่วนตัว</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <main class="card">
+    <div class="container">
         <h1>กรอกข้อมูลส่วนตัว</h1>
-        <p class="subtitle">กรุณากรอก ชื่อ นามสกุล และอายุ แล้วกดส่งข้อมูล</p>
-
         <form id="userForm">
             <div class="form-group">
-                <label for="firstName">ชื่อ</label>
-                <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    placeholder="กรอกชื่อ"
-                    required
-                >
+                <label for="name">ชื่อ:</label>
+                <input type="text" id="name" name="name" placeholder="กรอกชื่อ" required>
             </div>
 
             <div class="form-group">
-                <label for="lastName">นามสกุล</label>
-                <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    placeholder="กรอกนามสกุล"
-                    required
-                >
+                <label for="lastname">นามสกุล:</label>
+                <input type="text" id="lastname" name="lastname" placeholder="กรอกนามสกุล" required>
             </div>
 
             <div class="form-group">
-                <label for="age">อายุ</label>
-                <input
-                    type="number"
-                    id="age"
-                    name="age"
-                    placeholder="กรอกอายุ"
-                    min="0"
-                    max="150"
-                    required
-                >
+                <label for="age">อายุ:</label>
+                <input type="text" id="age" name="age" inputmode="numeric" maxlength="3" pattern="[0-9]{1,3}" placeholder="กรอกอายุ" required>
             </div>
 
             <button type="submit">ส่งข้อมูล</button>
         </form>
-    </main>
+    </div>
 
-    <script>
-        const userForm = document.getElementById('userForm');
-
-        userForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const firstNameInput = document.getElementById('firstName');
-            const lastNameInput = document.getElementById('lastName');
-            const ageInput = document.getElementById('age');
-
-            const firstName = firstNameInput.value.trim();
-            const lastName = lastNameInput.value.trim();
-            const ageValue = ageInput.value.trim();
-            const age = Number(ageValue);
-
-            if (!firstName) {
-                alert('กรุณากรอกชื่อ');
-                firstNameInput.focus();
-                return;
-            }
-
-            if (!lastName) {
-                alert('กรุณากรอกนามสกุล');
-                lastNameInput.focus();
-                return;
-            }
-
-            if (ageValue === '' || Number.isNaN(age) || age < 0 || age > 150) {
-                alert('กรุณากรอกอายุให้ถูกต้อง (0 - 150)');
-                ageInput.focus();
-                return;
-            }
-
-            alert(`ข้อมูลที่กรอก\nชื่อ: ${firstName}\nนามสกุล: ${lastName}\nอายุ: ${age} ปี`);
-        });
-    </script>
 </body>
 </html>
