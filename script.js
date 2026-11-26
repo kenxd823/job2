@@ -4,20 +4,63 @@ document.addEventListener('DOMContentLoaded', function () {
     const lastnameInput = document.getElementById('lastname');
     const ageInput = document.getElementById('age');
 
+    const allowedKeys = [
+        'Backspace',
+        'Delete',
+        'Tab',
+        'Escape',
+        'Enter',
+        'ArrowLeft',
+        'ArrowRight',
+        'Home',
+        'End'
+    ];
+
+    // อนุญาตเฉพาะตัวอักษรภาษาไทย (ก-ฮ, สระ, วรรณยุกต์) ภาษาอังกฤษ และเว้นวรรค (ไม่รวมตัวเลขและสัญลักษณ์)
+    const letterCharPattern = /^[a-zA-Z\u0E01-\u0E3A\u0E40-\u0E4E ]$/;
+    const nonLetterPattern = /[^a-zA-Z\u0E01-\u0E3A\u0E40-\u0E4E ]/g;
+    const validNamePattern = /^[a-zA-Z\u0E01-\u0E3A\u0E40-\u0E4E ]+$/;
+
+    function restrictToLettersOnly(inputElement) {
+        inputElement.addEventListener('keydown', function (event) {
+            if (
+                allowedKeys.includes(event.key) ||
+                event.ctrlKey ||
+                event.metaKey ||
+                event.isComposing ||
+                event.key === 'Process' ||
+                event.key === 'Unidentified'
+            ) {
+                return;
+            }
+
+            if (!letterCharPattern.test(event.key)) {
+                event.preventDefault();
+            }
+        });
+
+        function sanitizeValue() {
+            const cleaned = inputElement.value.replace(nonLetterPattern, '');
+            if (inputElement.value !== cleaned) {
+                inputElement.value = cleaned;
+            }
+        }
+
+        inputElement.addEventListener('input', function (event) {
+            if (!event.isComposing) {
+                sanitizeValue();
+            }
+        });
+
+        inputElement.addEventListener('compositionend', sanitizeValue);
+    }
+
+    // บังคับให้ช่องชื่อและนามสกุลกรอกได้เฉพาะตัวอักษรเท่านั้น
+    restrictToLettersOnly(nameInput);
+    restrictToLettersOnly(lastnameInput);
+
     // บังคับให้ช่องอายุกรอกได้เฉพาะตัวเลข 0-9 และไม่เกิน 3 ตัว
     ageInput.addEventListener('keydown', function (event) {
-        const allowedKeys = [
-            'Backspace',
-            'Delete',
-            'Tab',
-            'Escape',
-            'Enter',
-            'ArrowLeft',
-            'ArrowRight',
-            'Home',
-            'End'
-        ];
-
         if (allowedKeys.includes(event.key) || event.ctrlKey || event.metaKey) {
             return;
         }
@@ -48,14 +91,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const ageValue = ageInput.value.trim();
         const age = Number(ageValue);
 
-        if (!name) {
-            alert('กรุณากรอกชื่อ');
+        if (!name || !validNamePattern.test(name)) {
+            alert('กรุณากรอกชื่อเป็นตัวอักษรเท่านั้น');
             nameInput.focus();
             return;
         }
 
-        if (!lastname) {
-            alert('กรุณากรอกนามสกุล');
+        if (!lastname || !validNamePattern.test(lastname)) {
+            alert('กรุณากรอกนามสกุลเป็นตัวอักษรเท่านั้น');
             lastnameInput.focus();
             return;
         }
