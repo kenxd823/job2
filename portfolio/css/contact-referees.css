@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Referees & Contact — ส่วนบุคคลอ้างอิง และช่องทางติดต่อ
+   ========================================================================== */
+
+/* บุคคลอ้างอิง (Referees) */
+.referee-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  max-width: 780px;
+}
+
+.referee-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: var(--accent-gradient);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.referee-relation {
+  display: inline-block;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.referee-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.referee-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.referee-address svg {
+  width: 19px;
+  height: 19px;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* ช่องทางติดต่อ (Contact) */
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.contact-item-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px;
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.contact-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-label {
+  display: block;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}
+
+.contact-value {
+  font-weight: 600;
+  font-size: 1.02rem;
+  word-break: break-word;
+  transition: color var(--transition);
+}
+
+.contact-value:hover {
+  color: var(--accent);
+}
+
+.copy-btn {
+  padding: 7px 14px;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all var(--transition);
+}
+
+.copy-btn:hover {
+  border-color: var(--border-strong);
+  color: var(--accent);
+}

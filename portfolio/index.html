@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="พอร์ตโฟลิโอของ Phuwaret Phattarapakorn — Software Developer บัณฑิตจบใหม่ด้านการพัฒนาซอฟต์แวร์ เชี่ยวชาญ Java, C, React Native, Expo และ Firebase">
+  <title>Phuwaret Phattarapakorn | Software Developer Portfolio</title>
+
+  <!-- Google Fonts: IBM Plex Sans Thai + Plus Jakarta Sans + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Navigation Header -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand" aria-label="กลับไปด้านบน">
+        <span class="brand-name">Phuwaret</span>
+      </a>
+
+      <nav class="nav" id="navMenu" aria-label="เมนูหลัก">
+        <ul class="nav-list">
+          <li><a href="../index.html" class="nav-link">หน้าแรก</a></li>
+          <li><a href="#about" class="nav-link">เกี่ยวกับฉัน</a></li>
+          <li><a href="#skills" class="nav-link">ทักษะ</a></li>
+          <li><a href="#experience" class="nav-link">ประสบการณ์</a></li>
+          <li><a href="#education" class="nav-link">การศึกษา</a></li>
+          <li><a href="#referees" class="nav-link">บุคคลอ้างอิง</a></li>
+          <li><a href="#contact" class="nav-link">ติดต่อ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button
+          type="button"
+          class="icon-btn"
+          id="themeToggle"
+          aria-label="สลับโหมดสีมืดและสว่าง"
+          title="สลับโหมดสีมืด / สว่าง"
+        >
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+        </button>
+
+        <button
+          type="button"
+          class="icon-btn menu-toggle"
+          id="menuToggle"
+          aria-label="เปิดเมนูนำทาง"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero section" id="hero">
+      <div class="hero-bg-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="status-badge">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>พร้อมเริ่มงาน • Software Developer</span>
+          </div>
+
+          <p class="hero-greeting">สวัสดีครับ ผมชื่อ</p>
+          <h1 class="hero-title">Phuwaret<br>Phattarapakorn</h1>
+          <p class="hero-role">
+            <span class="mono-tag">Software Developer</span>
+            <span class="role-divider">•</span>
+            <span>บัณฑิตจบใหม่ด้านการพัฒนาซอฟต์แวร์</span>
+          </p>
+
+          <p class="hero-summary">
+            มีประสบการณ์ลงมือทำด้านการพัฒนาแอปพลิเคชัน เรียนรู้เทคโนโลยีใหม่ได้เร็ว
+            ทำงานร่วมกับทีมได้ดี และรับมือกับความกดดันได้ พร้อมสร้างโซลูชันที่ใช้งานได้จริงเพื่อขับเคลื่อนเป้าหมายขององค์กร
+          </p>
+
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>ติดต่อฉัน</span>
+            </a>
+            <a href="#experience" class="btn btn-secondary">ดูประสบการณ์ทำงาน</a>
+          </div>
+
+          <div class="hero-quick-contact">
+            <a href="tel:0613201356" class="quick-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>061-320-1356</span>
+            </a>
+            <a href="mailto:phuwaret.p@ku.th" class="quick-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>phuwaret.p@ku.th</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="profile-card">
+            <div class="profile-image-wrap">
+              <img
+                src="assets/images/693a0917-91b6-44ea-8a1a-ef0f6a691a87.jpg"
+                alt="รูปโปรไฟล์ของ Phuwaret Phattarapakorn"
+                class="profile-image"
+                width="768"
+                height="1364"
+              >
+            </div>
+
+            <div class="code-card" aria-label="ข้อมูลสรุปโปรไฟล์">
+              <div class="code-card-header">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="code-filename">developer.json</span>
+              </div>
+              <pre class="code-content"><code>{
+  <span class="code-key">"name"</span>: <span class="code-str">"Phuwaret Phattarapakorn"</span>,
+  <span class="code-key">"role"</span>: <span class="code-str">"Software Developer"</span>,
+  <span class="code-key">"education"</span>: <span class="code-str">"KU Kamphaeng Saen (2026)"</span>,
+  <span class="code-key">"stack"</span>: [<span class="code-str">"Java"</span>, <span class="code-str">"C"</span>, <span class="code-str">"React Native"</span>, <span class="code-str">"Expo"</span>, <span class="code-str">"Firebase"</span>]
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">01 // ABOUT ME</span>
+          <h2 class="section-title">เกี่ยวกับฉัน</h2>
+          <p class="section-subtitle">ภาพรวมตัวตน เป้าหมาย และจุดแข็งในการทำงานด้านพัฒนาซอฟต์แวร์</p>
+        </div>
+
+        <div class="about-grid">
+          <article class="card about-card reveal">
+            <h3 class="card-heading">แนะนำตัว</h3>
+            <p class="about-text">
+              บัณฑิตจบใหม่ด้านการพัฒนาซอฟต์แวร์ มีประสบการณ์ลงมือทำด้านการพัฒนาแอปพลิเคชัน
+              เรียนรู้เทคโนโลยีใหม่ได้เร็ว ทำงานร่วมกับทีมได้ดี และรับมือกับความกดดันได้
+              พร้อมนำทักษะการเขียนโปรแกรมมาสร้างโซลูชันที่ใช้งานได้จริงเพื่อขับเคลื่อนเป้าหมายขององค์กร
+            </p>
+            <div class="about-meta">
+              <div class="meta-item">
+                <span class="meta-label">ตำแหน่งที่สนใจ</span>
+                <span class="meta-value">Software Developer</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">มหาวิทยาลัย</span>
+                <span class="meta-value">Kasetsart University (KPS)</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">ปีที่สำเร็จการศึกษา</span>
+                <span class="meta-value">2026</span>
+              </div>
+            </div>
+          </article>
+
+          <div class="strengths-grid reveal">
+            <div class="card strength-card">
+              <div class="strength-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3>พัฒนาแอปพลิเคชันจริง</h3>
+              <p>มีประสบการณ์ลงมือพัฒนาแอปพลิเคชันและโปรแกรมภายในเพื่อแก้ปัญหาการทำงานจริง</p>
+            </div>
+
+            <div class="card strength-card">
+              <div class="strength-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <h3>เรียนรู้เทคโนโลยีใหม่ได้เร็ว</h3>
+              <p>เปิดรับเครื่องมือ ภาษา และเฟรมเวิร์กใหม่ ๆ พร้อมปรับตัวให้ทันกับความต้องการของโปรเจกต์</p>
+            </div>
+
+            <div class="card strength-card">
+              <div class="strength-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3>ทำงานร่วมกับทีมได้ดี</h3>
+              <p>สื่อสารชัดเจน ประสานงานกับเพื่อนร่วมงานและหน่วยงานที่เกี่ยวข้องได้อย่างราบรื่น</p>
+            </div>
+
+            <div class="card strength-card">
+              <div class="strength-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+              </div>
+              <h3>รับมือความกดดันได้</h3>
+              <p>รักษาความรอบคอบและความถูกต้องของงานได้แม้ภายใต้ข้อจำกัดด้านเวลาและภาระงาน</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">02 // SKILLS &amp; TECH STACK</span>
+          <h2 class="section-title">ทักษะและความเชี่ยวชาญ</h2>
+          <p class="section-subtitle">ภาษาโปรแกรม เฟรมเวิร์ก ฐานข้อมูล และเครื่องมือที่ใช้ในการพัฒนาและทำงาน</p>
+        </div>
+
+        <div class="skill-filters reveal" role="tablist" aria-label="ตัวกรองหมวดหมู่ทักษะ">
+          <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">ทั้งหมด</button>
+          <button type="button" class="filter-btn" data-filter="languages" role="tab" aria-selected="false">Programming Languages</button>
+          <button type="button" class="filter-btn" data-filter="mobile" role="tab" aria-selected="false">Mobile Development</button>
+          <button type="button" class="filter-btn" data-filter="database" role="tab" aria-selected="false">Database &amp; Cloud</button>
+          <button type="button" class="filter-btn" data-filter="tools" role="tab" aria-selected="false">Software &amp; Tools</button>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Programming Languages -->
+          <article class="card skill-category-card reveal" data-category="languages">
+            <div class="skill-card-head">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" x2="20" y1="19" y2="19"></line>
+                </svg>
+              </div>
+              <div>
+                <span class="skill-category-label">Programming Languages</span>
+                <h3>ภาษาโปรแกรม</h3>
+              </div>
+            </div>
+            <p class="skill-desc">พื้นฐานการเขียนโปรแกรมเชิงโครงสร้างและเชิงวัตถุสำหรับการพัฒนาซอฟต์แวร์และตรรกะระบบ</p>
+            <div class="skill-tags">
+              <span class="skill-pill">Java</span>
+              <span class="skill-pill">C</span>
+            </div>
+          </article>
+
+          <!-- Mobile Development -->
+          <article class="card skill-category-card reveal" data-category="mobile">
+            <div class="skill-card-head">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                  <path d="M12 18h.01"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="skill-category-label">Mobile Development</span>
+                <h3>การพัฒนาแอปพลิเคชันมือถือ</h3>
+              </div>
+            </div>
+            <p class="skill-desc">พัฒนาแอปพลิเคชันมือถือแบบ Cross-Platform ที่ใช้งานง่ายและตอบสนองรวดเร็ว</p>
+            <div class="skill-tags">
+              <span class="skill-pill">React Native</span>
+              <span class="skill-pill">Expo</span>
+            </div>
+          </article>
+
+          <!-- Database & Cloud Services -->
+          <article class="card skill-category-card reveal" data-category="database">
+            <div class="skill-card-head">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="skill-category-label">Database &amp; Cloud Services</span>
+                <h3>ฐานข้อมูลและบริการคลาวด์</h3>
+              </div>
+            </div>
+            <p class="skill-desc">เชื่อมต่อและจัดการข้อมูลแบบเรียลไทม์ รวมถึงบริการหลังบ้านบนคลาวด์สำหรับแอปพลิเคชัน</p>
+            <div class="skill-tags">
+              <span class="skill-pill">Firebase</span>
+            </div>
+          </article>
+
+          <!-- Software & Tools -->
+          <article class="card skill-category-card reveal" data-category="tools">
+            <div class="skill-card-head">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                  <path d="M3 9h18M3 15h18M9 3v18"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="skill-category-label">Software &amp; Tools</span>
+                <h3>ซอฟต์แวร์และเครื่องมือทำงาน</h3>
+              </div>
+            </div>
+            <p class="skill-desc">จัดการ ตรวจสอบ และสรุปข้อมูลอย่างเป็นระบบเพื่อสนับสนุนการดำเนินงานขององค์กร</p>
+            <div class="skill-tags">
+              <span class="skill-pill">Microsoft Excel</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">03 // EXPERIENCE</span>
+          <h2 class="section-title">ประสบการณ์ทำงาน</h2>
+          <p class="section-subtitle">ประสบการณ์การทำงานจริงที่ผสานทั้งด้านการสนับสนุนงานไอทีและการพัฒนาโปรแกรมภายใน</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="card timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <span class="badge-type">Part-Time</span>
+                  <h3 class="timeline-role">Administrative &amp; IT Support</h3>
+                </div>
+                <span class="timeline-date">ปี 2024</span>
+              </div>
+
+              <ul class="responsibility-list">
+                <li>
+                  <strong>ตรวจสอบข้อมูลพนักงานเพื่อให้ฐานข้อมูลมีความถูกต้อง</strong>
+                  <span class="en-sub">Employee data verification</span>
+                </li>
+                <li>
+                  <strong>ติดตามการเข้างานตามกะรายวันของพนักงาน</strong>
+                  <span class="en-sub">Monitored daily employee shift attendance</span>
+                </li>
+                <li>
+                  <strong>พัฒนาโปรแกรมภายในเพื่อสนับสนุนการดำเนินงานของบริษัท</strong>
+                  <span class="en-sub">Developed internal programs to support company operations</span>
+                </li>
+              </ul>
+
+              <div class="timeline-tags">
+                <span>Data Verification</span>
+                <span>Shift Attendance Monitoring</span>
+                <span>Internal Software Development</span>
+                <span>IT Support</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">04 // EDUCATION</span>
+          <h2 class="section-title">ประวัติการศึกษา</h2>
+          <p class="section-subtitle">เส้นทางการศึกษาตั้งแต่ระดับมัธยมศึกษาจนถึงระดับอุดมศึกษา</p>
+        </div>
+
+        <div class="education-grid">
+          <article class="card edu-card reveal">
+            <div class="edu-header">
+              <span class="edu-level">ระดับมหาวิทยาลัย</span>
+              <span class="edu-year">2026</span>
+            </div>
+            <h3 class="edu-school">Kasetsart University, Kamphaeng Saen Campus</h3>
+            <p class="edu-note">มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน</p>
+            <div class="edu-footer">
+              <span class="gpax-badge">
+                <span class="gpax-label">GPAX</span>
+                <strong class="gpax-value">2.63</strong>
+              </span>
+            </div>
+          </article>
+
+          <article class="card edu-card reveal">
+            <div class="edu-header">
+              <span class="edu-level">ระดับมัธยมศึกษา</span>
+              <span class="edu-year">2017–2022</span>
+            </div>
+            <h3 class="edu-school">Nongchangwittaya</h3>
+            <p class="edu-note">โรงเรียนหนองฉางวิทยา</p>
+            <div class="edu-footer">
+              <span class="gpax-badge">
+                <span class="gpax-label">GPAX</span>
+                <strong class="gpax-value">2.87</strong>
+              </span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Referees Section -->
+    <section class="section" id="referees">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">05 // REFEREES</span>
+          <h2 class="section-title">บุคคลอ้างอิง</h2>
+          <p class="section-subtitle">ข้อมูลบุคคลอ้างอิงสำหรับการตรวจสอบประวัติการทำงาน</p>
+        </div>
+
+        <div class="referee-wrap reveal">
+          <article class="card referee-card">
+            <div class="referee-avatar" aria-hidden="true">T</div>
+            <div class="referee-body">
+              <span class="referee-relation">หัวหน้างาน (Boss)</span>
+              <h3 class="referee-name">Boss : Toon</h3>
+              <p class="referee-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>173 Soi Rakkandee Road, Uthai Mai Subdistrict, Mueang Uthai Thani District, Uthai Thani 61000, Thailand</span>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">06 // CONTACT</span>
+          <h2 class="section-title">ติดต่อฉัน</h2>
+          <p class="section-subtitle">ยินดีรับโอกาสในการร่วมงาน ตำแหน่ง Software Developer หรือพูดคุยแลกเปลี่ยนด้านการพัฒนาซอฟต์แวร์</p>
+        </div>
+
+        <div class="contact-info reveal">
+          <div class="card contact-item-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <span class="contact-label">โทรศัพท์</span>
+              <a href="tel:0613201356" class="contact-value">061-320-1356</a>
+            </div>
+            <button type="button" class="copy-btn" data-copy="061-320-1356" data-label="เบอร์โทรศัพท์">
+              คัดลอก
+            </button>
+          </div>
+
+          <div class="card contact-item-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <span class="contact-label">อีเมล</span>
+              <a href="mailto:phuwaret.p@ku.th" class="contact-value">phuwaret.p@ku.th</a>
+            </div>
+            <button type="button" class="copy-btn" data-copy="phuwaret.p@ku.th" data-label="อีเมล">
+              คัดลอก
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span>Phuwaret Phattarapakorn — Software Developer</span>
+      </div>
+      <p class="footer-copy">&copy; <span id="currentYear">2026</span> Phuwaret Phattarapakorn. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="กลับขึ้นด้านบน" title="กลับขึ้นด้านบน">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="m18 15-6-6-6 6"></path>
+    </svg>
+  </button>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/script.js?v=3"></script>
+</body>
+</html>

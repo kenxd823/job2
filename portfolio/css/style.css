@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Phuwaret Phattarapakorn — ไฟล์ศูนย์รวมสไตล์พอร์ตโฟลิโอ
+   แยกสไตล์แต่ละส่วนไว้เป็นไฟล์ย่อยเพื่อให้แก้ไขและดูแลได้ง่าย
+   ========================================================================== */
+
+@import url('base.css?v=4');
+@import url('components.css?v=4');
+@import url('header-footer.css?v=4');
+@import url('hero.css?v=4');
+@import url('about-skills.css?v=4');
+@import url('timeline-edu.css?v=4');
+@import url('contact-referees.css?v=4');
+@import url('responsive.css?v=4');
