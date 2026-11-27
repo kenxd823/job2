@@ -42,6 +42,32 @@ h1 {
     letter-spacing: 0.2px;
 }
 
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.page-nav-link {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2563eb;
+    background-color: #eff6ff;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.page-nav-link:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
 h1::after {
     content: "";
     display: block;

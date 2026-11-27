@@ -3,32 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>กรอกข้อมูลส่วนตัว</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>หน้าแรก | Phuwaret Website</title>
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-    <div class="container">
-        <h1>กรอกข้อมูลส่วนตัว</h1>
-        <form id="userForm">
-            <div class="form-group">
-                <label for="name">ชื่อ:</label>
-                <input type="text" id="name" name="name" placeholder="กรอกชื่อ" required>
+    <header class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">Phuwaret</a>
+            <nav class="nav-links" aria-label="เมนูหลัก">
+                <a href="index.html" class="nav-link active">หน้าแรก</a>
+                <a href="portfolio/index.html" class="nav-link">Portfolio</a>
+                <a href="contact/index.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="home-wrapper">
+        <section class="hero-card">
+            <span class="badge">งานที่ 3 • เว็บไซต์ 3 หน้า</span>
+            <h1>ยินดีต้อนรับสู่เว็บไซต์</h1>
+            <p class="subtitle">
+                เลือกหน้าที่ต้องการเยี่ยมชมได้จากเมนูด้านบนหรือการ์ดด้านล่าง
+                ทั้งหน้าพอร์ตโฟลิโอจากงานแรกและแบบฟอร์มติดต่อจากงานที่สอง
+            </p>
+
+            <div class="card-grid">
+                <a href="portfolio/index.html" class="page-card">
+                    <div class="card-top">
+                        <h2>Portfolio</h2>
+                        <span class="arrow" aria-hidden="true">→</span>
+                    </div>
+                    <p>ดูประวัติส่วนตัว ทักษะ ประสบการณ์ทำงาน และการศึกษาของ Phuwaret Phattarapakorn</p>
+                    <span class="card-cta">เปิดหน้า Portfolio</span>
+                </a>
+
+                <a href="contact/index.html" class="page-card">
+                    <div class="card-top">
+                        <h2>Contact Form</h2>
+                        <span class="arrow" aria-hidden="true">→</span>
+                    </div>
+                    <p>กรอกแบบฟอร์มข้อมูลส่วนตัว</p>
+                    <span class="card-cta">เปิดหน้า Contact</span>
+                </a>
             </div>
-
-            <div class="form-group">
-                <label for="lastname">นามสกุล:</label>
-                <input type="text" id="lastname" name="lastname" placeholder="กรอกนามสกุล" required>
-            </div>
-
-            <div class="form-group">
-                <label for="age">อายุ:</label>
-                <input type="text" id="age" name="age" inputmode="numeric" maxlength="3" pattern="[0-9]{1,3}" placeholder="กรอกอายุ" required>
-            </div>
-
-            <button type="submit">ส่งข้อมูล</button>
-        </form>
-    </div>
-
+        </section>
+    </main>
 </body>
 </html>
